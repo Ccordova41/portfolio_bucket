@@ -1,0 +1,4 @@
+m = $('#modal');
+m.html('<%= j(render partial: 'goal_form', locals: {goal: @goal}) %>');
+m.modal('show');
+$('#modal').integrateDatepicker();

@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Bucket List!
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .row-fluid
+      .span10.offset1
+        .hero-unit.text-center
+          %h1
+            Bucket List
+          %p
+            Bucket List 
+            = link_to 'New goal', new_goal_path,  class:  'btn btn-primary', remote: true
+    = yield

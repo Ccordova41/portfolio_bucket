@@ -1,0 +1,18 @@
+.container
+  - if @goals.empty?
+    %span.text-warning There are no goals!
+  - else
+    %table.table.table-hover.table-bordered
+      %thead
+        %tr
+          %th Title
+          %th Created at
+          %th Completed
+      %tbody
+        - @goals.each do |goal|
+          %tr
+            %td
+              %strong= goal.title
+            %td.text-info= goal.created_at
+            %td.text-success= goal.completed
+#modal.modal.fade
